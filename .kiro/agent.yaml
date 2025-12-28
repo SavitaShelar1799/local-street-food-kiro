@@ -1,0 +1,17 @@
+name: mumbai-street-food-agent
+description: Understands Mumbai street food culture and gives local recommendations
+
+
+model:
+provider: openai
+name: gpt-4.1-mini
+
+
+context:
+files:
+- context/product.md
+
+
+behavior:
+temperature: 0.4
+max_tokens: 500
