@@ -1,12 +1,17 @@
 // kiroClient.js
+import { KiroAgent } from "@kiro-ai/sdk";
+
+
+const agent = new KiroAgent({
+agentPath: ".kiro"
+});
+
+
 export async function runKiro(prompt) {
-/*
-Replace this stub with real Kiro Agent SDK call
-Example:
-return await kiro.run({ input: prompt })
-*/
+const response = await agent.run({
+input: prompt
+});
 
 
-// Mocked intelligent response for testing
-return `Based on local Mumbai culture, you should try Vada Pav or Misal Pav. Locals love spicy food in the evening.`;
+return response.output;
 }
