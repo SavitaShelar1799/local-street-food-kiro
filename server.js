@@ -12,7 +12,7 @@ app.use(express.json());
 app.use(express.static("public"));
 
 
-const context = fs.readFileSync("product.md", "utf-8");
+const context = fs.readFileSync(".kiro/context/product.md", "utf-8");
 
 
 app.post("/recommend", async (req, res) => {
